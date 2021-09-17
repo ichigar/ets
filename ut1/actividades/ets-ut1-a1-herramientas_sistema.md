@@ -12,6 +12,7 @@
 
 De forma guiada, siguiendo las instrucciones del profesor aprenderemos a:
 
+- Primeros pasos por Ubuntu
 - Movernos por el sistema de archivos
 - Uso básico del terminal
 - Ralizar capturas de pantallas y editarlas
