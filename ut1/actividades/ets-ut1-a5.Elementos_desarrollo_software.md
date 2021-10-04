@@ -43,6 +43,7 @@ Inserta aquí los nombres de los componentes del grupo.
 
 * Fuentes:
     * Se incluye fuente de la que se obtuvo la información. Las fuentes son variadas y son rigurosas.
+    * El texto del enlace a las fuentes debe incluir el nombre de la web a la que apunta y una breve descrición de que nos vamos a encontrar al hacer clic en el mismo y . Ejemplo: [parzibyte.me: Diferencia entre lenguajes fuertemente y débilmente tipados](https://parzibyte.me/blog/2017/10/13/tipado-debil-tipado-fuerte-diferencias-explicacion/)
 * Imágenes:
     * Se incluyen imágenes que ilustran las respuestas. Las imágenes están relacionadas con la respuesta incluida.
     * Las imágenes y diagramas coinciden con la información incluida y son fáciles de interpretar.
@@ -182,6 +183,3 @@ Los IDE suelen ofrecer una serie de componentes que facilitan el desarrollo de p
 Busca información de, al menos, 3 IDEs y describe sus características más importantes.
 
 >R
-
-
-###### tags: `ets` `ut1` `herramientas` `desarrollo` `software`
