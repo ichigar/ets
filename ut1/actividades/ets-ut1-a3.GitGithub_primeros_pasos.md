@@ -1,5 +1,4 @@
-
-# Git y Github. Primeros pasos
+# ETS-UT1-A3. Git y Github. Primeros pasos
 
 ## Elementos curriculares
 * **RA1**: Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático, analizando sus características y las fases en las que actúan hasta llegar a su puesta en funcionamiento.
@@ -157,8 +156,8 @@ $ tree
 
 taller-git-github/
 ├── images
-│   ├── img-00.png
-│   └── img-01.png
+│   ├── img-00.png
+│   └── img-01.png
 ├── LICENSE
 ├── README.md
 └── spelling.sh
@@ -286,18 +285,10 @@ Para generar el token tienes las instrucciones del [siguiente tutorial](https://
 
 Al final del procedimiento obtendremos una cadena de texto de la forma `ghp_ICfUCaabcwKVEXIVcoO1pWfTwMvs4B26BGkP`
 
-A continuación le decimos a **git** el repositorio remoto, con el token incluido, al que debe sincronizar cambios cuando ejecutemos **git push**. Para ello, en la carpeta de inicio de nuestro repositorio ejecutamos:
-```bash
-$ git remote set-url origin https://<TOKEN>@github.com/<username>/<repository_name>.git
-```
-Para el repositiorio que creamos sería algo como:
-```bash
-$ git remote set-url origin https://ghp_ICfUCaabcwKVEXIVcoO1pWfTwMvs4B26BGkP@github.com/ichigar/intro-github.git
-```
-A partir de ahora, al ejecutar **git push** se sincronizarán los cambios en el repositorio:
+Ahora ya podemos subir los cambios ejecutando **git push https://<GITHUB_ACCESS_TOKEN>@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git** reemplazando <GITHUB_ACCESS_TOKEN>, <GITHUB_USERNAME>, <REPOSITORY_NAME> con el token, nuestro usuario en GitHub y el nombre del repositorio.
 
 ```bash
-$ git push
+$ git push https://ghp_ICfUCaabcwKVEXIVcoO1pWfTwMvs4B26BGkP@github.com/ichigar/intro-github.git
 Enumerando objetos: 5, listo.
 Contando objetos: 100% (5/5), listo.
 Compresión delta usando hasta 8 hilos
@@ -316,5 +307,4 @@ Si accedemos ahora a la web de nuestro repositorio veremos que se ha subido el a
 ## Referencias
 * [Guía de Supervivencia de Git y GitHub](https://leanpub.com/gitygithub)
 * [Guía para crear PAT en Github](https://techglimpse.com/git-push-github-token-based-passwordless/)
-
 ###### tags: `ets` `ut1` `git` `github` `introducción`
