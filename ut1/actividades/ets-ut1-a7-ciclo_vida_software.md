@@ -137,6 +137,7 @@ Documemento con archivo de la presentación
 * La presentación tiene un estilo homogeneo en todas las diapositivas.
 * En la elaboración de la presentación y exposición participan todos los miembros del grupo.
 * Al exponer la presentación se usa como apoyo, no como un soporte desde el que meramente se lee un texto.
+* Se valorará la entrega del guión utilizado para realizar la presentación
 
 ## Parte 3. Gamificación
 
