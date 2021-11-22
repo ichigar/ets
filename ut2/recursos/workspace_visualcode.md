@@ -1,4 +1,4 @@
-# Configurar Workspace en VisualCode
+# Configurar Workspace, venv y Flask en VisualCode
 
 Cuando como programadores iniciamos in nuevo proyecto (en cualquier lenguaje de programación) tenemos que configurar un entorno para poder ejecutar nuestro proyecto.
 
@@ -54,34 +54,35 @@ Hay muchas herramientas de Python disponibles para crear un entorno virtual de P
 $ sudo apt install python3.8-venv
 ```
 
-Todo lo que hemos instalado hasta ahora es para disponer globalmente de las herramientas necesarias. Vamos ahora a preparar un **entorno virtual** para el desarrollo de nuestro proyecto. Empezamos creando la carpeta que contendrá nuestro proyecto, en este ejemplo será `python-demo` 
+Todo lo que hemos instalado hasta ahora es para disponer globalmente de las herramientas necesarias. Vamos ahora a preparar un **entorno virtual** para el desarrollo de nuestro proyecto. Empezamos creando la carpeta que contendrá nuestro proyecto, en este ejemplo será `hello-flask` 
 
 ```bash
 $ mkdir proyectos
 $ cd proyectos
-$ mkdir python-demo
+$ mkdir hello-flask
 
 ```
 
 Para crear un entorno virtual para nuestro proyecto ejecutamos:
 
 ```bash
-$ python3 -m venv python-demo
+$ python3 -m venv hello-flask
 ```
 
 Una vez que hemos creado el entorno virtual tenemos que asegurarnos de que instalamos el resto de paquetes de python para nuestro proyecto en nuestro entorno virtual. Para hacerlo activamos el entorno virtual con el siguiente comandos:
 
 ```bash
-$ source python-demo/bin/activate
+$ cd hello-flask
+$ source bin/activate
 ```
 El prompt del sistema cambiará a :
 ```bash
-(python-demo) $ 
+(hello-flask) $ 
 ```
 Si quisieramos desactivar el entorno virtual ejecutaríamos:
 
 ```bash
-(python-demo) $ deactivate
+(hello-flask) $ deactivate
 $
 ```
 
@@ -92,10 +93,6 @@ Para instalar Vscode en Ubuntu ejecutamos:
 ```bash
 $ sudo snap install vscode
 ```
-
-
-
-
 
 Una vez abierto pasamos a crear el **workspace**. Un workspace es un proyecto que contiene uno o más directorio principales (root folders), incluyendo toda la configuración de visual code para ese proyecto. La configuración incluye configuración de Visual Code, extensiones y  configuración de depuración.
 
@@ -108,7 +105,7 @@ El tener un workspace nos permite copiarlo de un ordenador a otro sin perder la 
 
    ![create_workspace](imgs/create_workspace.png)
 
-2. Añadimos el directorio de trabajo a un nuevo workspace. Selecciona   el   menú   “file”,   opción   “add   folder   to workspace...”. Selecciona el directorio de trabajo **python-demo**.
+2. Añadimos el directorio de trabajo a un nuevo workspace. Selecciona   el   menú   “file”,   opción   “add   folder   to workspace...”. Selecciona el directorio de trabajo **hello-flask**.
 
 3. Guarda el workspace, seleccionando en el menú “file”, la opción “save workspace”. Selecciona el mismo directorio de trabajo para guardarlo.
     a) En el directorio de trabajo se ha creado un archivo con extensión   “.code-workspace”.   En   este   archivo   se guardará la configuración de visual code para nuestro proyecto.
@@ -127,15 +124,54 @@ Al finalizar la instalación nos pedirá que instalemos dependencias. Abrimos el
 $ sudo apt-get install python3 python3-venv python3-pip
 ```
 
-Seleccionamos interprete de Python a utilizar. El incluido por venv en el proyecto. **<SHIFT> + <CTRL> + P** escribimos **Python:seleccionar interprete** y lo seleccionamos a nivel de workspace:
+Seleccionamos interprete de Python a utilizar. El incluido por venv en el proyecto. **<SHIFT> + <CTRL> + P** escribimos **Python:seleccionar interprete** 
 
-![select_interpreter_00](/home/ivan/mega/clases/github/ets/ut2/recursos/imgs/select_interpreter_00.png)
+![select_interpreter_00](imgs/select_interpreter_00.png)
+
+Y lo seleccionamos a nivel de workspace:
+
+![select_interpreter_ws](/home/ivan/mega/clases/github/ets/ut2/recursos/imgs/select_interpreter_ws.png)
+
+Nos mostrará el interprete incluido en el entorno virtual:
+
+![select_interpreter](imgs/select_interpreter.png)
+
+## 4.3. Creando nuestra aplicación
+
+Para probar nuestro entorno de trabajo vamos a crear una aplicación utilizando el Framework flask. Para instalarlo accedemos al terminal en el que nos aseguramos de que el entorno virtual está activado y, en la carpeta de inicio del proyecto ejecutamos:
+
+```bash
+(hello-flask)$ python -m pip install flask
+
+```
+
+Para crear una apliación mínima en flask creamos desde Vscode, en la carpeta de inicio de nuestro proyecto un nuevo fichero de nombre `app.py`
+
+E insertamos en el mismo:
+
+```python
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "¡Hola desde Flask!"
+```
+
+Para iniciar nuestra aplicación ejecutamos en el terminal:
+
+```bash
+(python-demo) usuario@vm-xubuntu-20:~/proyectos/hello-flask$ python -m flask run
+```
+
+Comprobamos accedientdo en el navegador a la URL http://localhost:5000
+
+![flask_test_firefox](imgs/flask_test_firefox.png)
 
 
-
-Para cualquier lenguaje de programación hay dos herramientas que nuestro IDE debería incluir: un **linter** y una herramienta para dar formato de forma automática al código. Vscode nos permite instalar como extensiones multiples **linters** y **formateadores**
 
 ## Recursos
 
 * https://dev.to/idrisrampurawala/setting-up-python-workspace-in-visual-studio-code-vscode-149p
 * https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project/
+* https://code.visualstudio.com/docs/python/tutorial-flask
