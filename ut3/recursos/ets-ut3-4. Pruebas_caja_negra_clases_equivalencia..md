@@ -149,4 +149,3 @@ def new_passwd(passwd1, passwd2):
     :return:str
     """
 ```
-###### tags: `ets` `ut3` `partición` `clases de equivalencia` `actividad`

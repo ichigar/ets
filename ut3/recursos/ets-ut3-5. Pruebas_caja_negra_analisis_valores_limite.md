@@ -167,4 +167,3 @@ def salario_empleado(num_empleado, num_departamento, oficio):
 ## Recursos
 * [Particiones de equivalencia: Pruebas de caja negra - Educando con TIC](https://educandocontic.com/particiones-de-equivalencia/)
 * [Valores límite: Pruebas de caja negra - Educando con TIC](https://educandocontic.com/valores-limite-pruebas/)
-###### tags: `ets` `ut3` `valores` `límite
