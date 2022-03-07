@@ -79,7 +79,7 @@ En resumen:
 | -------------------- | --------------------------------- | ------------------------------------ |
 | **1. Rango** | 1 válida (incluye valores del rango) | 2 no válidas ( 1 por encima rango, 1 por debajo rango) |
 | **2. Valor específico**| 1 válida (incluye dicho valor) | 2 no válidas ( 1 por encima valor, 1 por debajo valor) |
-| **3. Miembro conjunto** | 1 válida (incluye miembros del conjunto) | 1 no válida (valores que no pertenecen al conjunto) |
+| **3. Miembro conjunto** | 1 válida por cada elemento del conjunto | 1 no válida por cada valor del conjunto que devuelve valor no válido |
 | **4. Lógica** | 1 válida (valores cumplen condición) |  1 no válida (valores no cumplen condición) |
 
 ### Identificar los casos de prueba
