@@ -11,7 +11,7 @@ p1 = Producto("Pizza", 10, 0.2, "Pizza de jamón y queso")
 p2 = Producto("Hamburguesa", 15, 0.11, "Hamburguesa con queso")
 
 # Inicializamos un pedido
-pedido1 = Pedido("2022-04-01", c1)
+pedido1 = Pedido("2022-04-01 20:06:30", c1)
 
 # Detalles del pedido
 pedido1_d1 = DetallePedido(2, p1) # 2 pizzas de 10 euros cada una
