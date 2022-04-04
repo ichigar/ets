@@ -4,7 +4,7 @@ from pago import *
 from cliente import *
 
 # Creamos un cliente ficticio
-c1 = Cliente("41222333a", "Juan", "Perez", "Calle Falsa 123", "912345678", "jperez@example.com")
+c1 = Cliente("41222333a", "Juan", "Perez", "Calle Falsa 123", "666345678", "jperez@example.com")
 
 # Creamos productos para nuestro restaurante 
 p1 = Producto("Pizza", 10, 0.2, "Pizza de jamón y queso")
