@@ -19,15 +19,15 @@ class Pedido:
     def add_detalle(self, detalle):
         self.__detalles.append(detalle)
         
-    def calc_igic(self):
-        return self.calc_sub_total() * self.IGIG
-    
     def calc_sub_total(self):
         sub_total = 0
         for detalle in self.__detalles:
             sub_total += detalle.calc_subtotal()
         return sub_total
     
+    def calc_igic(self):
+        return self.calc_sub_total() * self.IGIG
+
     def calc_total(self):
         return self.calc_sub_total() + self.calc_igic()
     
